@@ -22,7 +22,8 @@ async def main() -> None:
             "Fill the username field with the value of variable 'username' "
             "and the password field with the value of variable 'password'. "
             "Click the Login button. "
-            "Once the products page loads, find the 'Sauce Labs Backpack' and click its 'Add to cart' button. "
+            "Once the products page loads, first sort the products by selecting the value of variable 'sort_option' from the sort dropdown. "
+            "Then, find the 'Sauce Labs Backpack' and click its 'Add to cart' button. "
             "Next, click the shopping cart icon at the top right of the page to view your cart. "
             "On the cart page, click the 'Checkout' button. "
             "On the checkout information page, fill your First Name with variable 'first_name', "
@@ -34,6 +35,7 @@ async def main() -> None:
         variables={
             "username": "standard_user",
             "password": "secret_sauce",
+            "sort_option": "za",  # Saucedemo value for 'Name (Z to A)'
             "first_name": "Jev",
             "last_name": "Agent",
             "zip_code": "90210"

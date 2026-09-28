@@ -249,7 +249,7 @@ class PlaywrightMCPClient:
         **_: Any,
     ) -> dict[str, Any]:
         """Choose an option in a <select> or combobox, then wait for stability."""
-        await self._call("browser_select_option", {"target": ref, "value": value})
+        await self._call("browser_select_option", {"target": ref, "values": [value]})
         return await self._wait_for_stable_snapshot(poll_interval=0.3, max_wait=3.0)
 
 
