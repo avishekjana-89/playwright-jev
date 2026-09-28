@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets
+.env
+
+# Playwright MCP runtime artifacts (page snapshots + console logs)
+.playwright-mcp/
+
+# macOS
+.DS_Store
+
+# Pytest cache
+.pytest_cache/
+
+# mypy / ruff caches
+.mypy_cache/
+.ruff_cache/
+
+# Event log output
+agent_run_*.jsonl
+
+# Per-run debug logs (Jev request/response payloads)
+logs/

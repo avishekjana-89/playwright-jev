@@ -1,0 +1,37 @@
+# Playwright JEV Framework — Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Typesafe AI — Jev (System 1) decision engine
+typesafe-sdk>=0.2
+
+# Playwright MCP client SDK
+mcp>=1.0
+
+# Typed state models & settings
+pydantic>=2.0
+pydantic-settings>=2.0
+
+# Async runtime
+anyio>=4.0
+
+# Structured logging
+structlog>=24.0
+
+# .env file loading
+python-dotenv>=1.0
+
+# Retry logic for MCP tool calls
+tenacity>=8.0
+
+# Terminal output (optional but nice)
+rich>=13.0
+
+# Context tokenization
+tiktoken>=0.7
+
+
+# ── Dev / test ──────────────────────────────────────────────────────────────
+pytest>=8.0
+pytest-asyncio>=0.23
+pytest-mock>=3.14
+ruff>=0.4
