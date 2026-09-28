@@ -162,9 +162,16 @@ class DynamicJevRouter(Router):
         _MAX_CHOICES = 255
         if len(elements) > _MAX_CHOICES:
             goal_words = set(state.goal.lower().split())
+            
+            # Pre-compute token sets to avoid expensive string splitting during the sort loop
+            element_tokens = {
+                ref_id: set(desc.lower().split())
+                for ref_id, desc in elements.items()
+            }
+            
             def _relevance(item: tuple[str, str]) -> int:
-                desc_words = set(item[1].lower().split())
-                return len(goal_words & desc_words)
+                return len(goal_words & element_tokens[item[0]])
+                
             ranked = sorted(elements.items(), key=_relevance, reverse=True)
             elements = dict(ranked[:_MAX_CHOICES])
             log.debug(
